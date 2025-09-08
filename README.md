@@ -82,6 +82,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
 
 ## OUTPUT:
-<img width="587" height="90" alt="image" src="https://github.com/user-attachments/assets/cee37646-c263-4729-942a-abd7851d1478" />
+<img width="587" height="90" alt="image" src="https://github.com/user-attachments/assets/1cafa1ca-abd5-46cf-9b47-be5cfbae6716" />
+
