@@ -1,45 +1,51 @@
-<h1>ExpNo 1 : Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+# ExpNo 1 : Developing AI Agent with PEAS Description
 
-<h3>AIM:</h3>
-<p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
+**Name:** Saravanan N  
+**Register Number/Staff Id:** TSML006  
 
-<h3>Theory</h3>
-<h3>Plant Watering Agent:</h3>
-<p>This agent monitors the soil moisture level of plants and waters them if the moisture is below a threshold (considered dry). The environment consists of multiple plants in different locations. The agent senses the moisture level of each plant and decides whether to water it. The agent’s performance is measured by the number of plants properly watered, and each unnecessary movement reduces performance. Hence, the agent ensures plants are properly maintained.</p>
+---
 
-<hr>
-<h3>PEAS DESCRIPTION:</h3>
-<table border="1" cellpadding="5" cellspacing="0">
-  <tr>
-    <td><strong>Agent Type</strong></td>
-    <td><strong>Performance</strong></td>
-    <td><strong>Environment</strong></td>
-    <td><strong>Actuators</strong></td>
-    <td><strong>Sensors</strong></td>
-  </tr>
-  <tr>
-    <td><strong>Plant watering agent</strong></td>
-    <td><strong>Watering dry plants, agent movement</strong></td>
-    <td><strong>Plants, Soil Moisture</strong></td>
-    <td><strong>Watering mechanism</strong></td>
-    <td><strong>Location, Soil Moisture level</strong></td>
-  </tr>
-</table>
+## AIM:
+To find the PEAS description for the given AI problem and develop an AI agent.
 
-<hr>
-<h3>DESIGN STEPS</h3>
-<p><strong>STEP 1:</strong> Input: Soil moisture level of plants, Location of each plant.</p>
-<p><strong>STEP 2:</strong> Output: Water the plant if the soil is dry.</p>
-<p><strong>STEP 3:</strong> Develop PEAS description based on performance, environment, actuators, and sensors.</p>
-<p><strong>STEP 4:</strong> Implement the AI agent: Check soil moisture of each plant and water if dry.</p>
-<p><strong>STEP 5:</strong> Measure performance: Increment for watering, decrement for unnecessary movement.</p>
+---
 
-<hr>
-<h3>CODE:</h3>
+## THEORY
+### Plant Watering Agent:
+This agent monitors the soil moisture level of plants and waters them if the moisture is below a threshold (considered dry). The environment consists of multiple plants in different locations. The agent senses the moisture level of each plant and decides whether to water it. The agent’s performance is measured by the number of plants properly watered, and each unnecessary movement reduces performance. Hence, the agent ensures plants are properly maintained.
 
-<textarea id="codeBlock" rows="35" cols="100" readonly>
+---
+
+## PEAS DESCRIPTION:
+
+| Agent Type             | Performance                     | Environment           | Actuators          | Sensors                      |
+|------------------------|---------------------------------|---------------------|------------------|-------------------------------|
+| Plant watering agent   | Watering dry plants, agent movement | Plants, Soil Moisture | Watering mechanism | Location, Soil Moisture level |
+
+---
+
+## DESIGN STEPS
+
+**STEP 1: Identifying the input:**  
+Soil moisture level of plants, Location of each plant.
+
+**STEP 2: Identifying the output:**  
+Water the plant if the soil is dry.
+
+**STEP 3: Developing the PEAS description:**  
+PEAS description is developed by specifying the performance, environment, actuators, and sensors in the agent.
+
+**STEP 4: Implementing the AI agent:**  
+Check the soil moisture of each plant and water the plant if dry.
+
+**STEP 5: Measure the performance parameters:**  
+For each plant watered, performance is incremented; for each unnecessary movement, performance is decremented.
+
+---
+
+## CODE
+
+```python
 import random
 
 class PlantWateringAgent:
@@ -65,7 +71,6 @@ class PlantWateringAgent:
     def skip_plant(self, plant):
         print(f"{plant}: Soil is moist. No watering needed.")
 
-# Main function to test the agent
 def main():
     agent = PlantWateringAgent()
     # Example moisture levels (can be replaced with real sensor input)
@@ -80,26 +85,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-</textarea>
-<br><br>
-<button onclick="copyCode()">Copy Code</button>
-
-<script>
-function copyCode() {
-  var copyText = document.getElementById("codeBlock");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-  document.execCommand("copy");
-  alert("Code copied to clipboard!");
-}
-</script>
-
-<hr>
-<h3>OUTPUT:</h3>
-<pre>
-Plant 1: Soil is dry! Watering the plant.
-Plant 2: Soil is moist. No watering needed.
-Plant 3: Soil is dry! Watering the plant.
-
-Total actions performed by agent: 2
-</pre>
