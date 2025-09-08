@@ -1,14 +1,12 @@
-# ExpNo 1 : Developing AI Agent with PEAS Description
+## ExpNo 1 : Developing AI Agent with PEAS Description
 
-**Name:** Saravanan N  
-**Register Number/Staff Id:** TSML006  
+**Name:** VINISH RAJ R  
+**Register Number:** 212223230243  
 
----
 
 ## AIM:
 To find the PEAS description for the given AI problem and develop an AI agent.
 
----
 
 ## THEORY
 ### Plant Watering Agent:
@@ -41,7 +39,6 @@ Check the soil moisture of each plant and water the plant if dry.
 **STEP 5: Measure the performance parameters:**  
 For each plant watered, performance is incremented; for each unnecessary movement, performance is decremented.
 
----
 
 ## CODE
 
