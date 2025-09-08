@@ -87,3 +87,6 @@ if __name__ == "__main__":
 ## OUTPUT:
 <img width="587" height="90" alt="image" src="https://github.com/user-attachments/assets/1cafa1ca-abd5-46cf-9b47-be5cfbae6716" />
 
+## RESULT:
+The Plant Watering Agent senses soil moisture and waters plants when needed, showing its PEAS-based AI functionality.
+
