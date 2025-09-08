@@ -68,14 +68,18 @@ class PlantWateringAgent:
 
 def main():
     agent = PlantWateringAgent()
-    plant_moisture = [25, 45, 20]  # Example moisture levels
+
+    plant_moisture = []
+    for plant in agent.plants:
+        moisture = int(input(f"Enter moisture level for {plant} (0-100): "))
+        plant_moisture.append(moisture)
 
     for i, moisture in enumerate(plant_moisture):
         plant = agent.plants[i]
         sensed_moisture = agent.sense(moisture)
         agent.act(plant, sensed_moisture)
 
-    print(f"Total actions performed by agent: {agent.performance}")
+    print(f"\nTotal actions performed by agent: {agent.performance}")
 
 if __name__ == "__main__":
     main()
@@ -84,8 +88,12 @@ if __name__ == "__main__":
 <hr>
 <h3>OUTPUT:</h3>
 <pre>
+Enter moisture level for Plant 1 (0-100): 25
 Plant 1: Soil is dry! Watering the plant.
+Enter moisture level for Plant 2 (0-100): 45
 Plant 2: Soil is moist. No watering needed.
+Enter moisture level for Plant 3 (0-100): 20
 Plant 3: Soil is dry! Watering the plant.
+
 Total actions performed by agent: 2
 </pre>
