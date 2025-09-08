@@ -43,6 +43,7 @@
 <hr>
 <h3>CODE:</h3>
 <pre>
+```
 import random
 
 class PlantWateringAgent:
@@ -51,10 +52,12 @@ class PlantWateringAgent:
         self.performance = 0
 
     def sense(self, moisture_level):
+        """Sense the moisture level of a plant"""
         return moisture_level
 
     def act(self, plant, moisture_level):
-        if moisture_level < 30:
+        """Act based on moisture level"""
+        if moisture_level < 30:  # Less than 30% moisture → water the plant
             self.water_plant(plant)
         else:
             self.skip_plant(plant)
@@ -66,23 +69,22 @@ class PlantWateringAgent:
     def skip_plant(self, plant):
         print(f"{plant}: Soil is moist. No watering needed.")
 
+# Main function to test the agent
 def main():
     agent = PlantWateringAgent()
-
-    plant_moisture = []
-    for plant in agent.plants:
-        moisture = int(input(f"Enter moisture level for {plant} (0-100): "))
-        plant_moisture.append(moisture)
+    # Example moisture levels (can be replaced with real sensor input)
+    plant_moisture = [25, 45, 20]  # % moisture for each plant
 
     for i, moisture in enumerate(plant_moisture):
         plant = agent.plants[i]
         sensed_moisture = agent.sense(moisture)
         agent.act(plant, sensed_moisture)
 
-    print(f"\nTotal actions performed by agent: {agent.performance}")
+    print(f"Total actions performed by agent: {agent.performance}")
 
 if __name__ == "__main__":
     main()
+```
 </pre>
 
 <hr>
