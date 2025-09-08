@@ -3,12 +3,12 @@
 <h3>Register Number/Staff Id: TSML006</h3>
 
 <h3>AIM:</h3>
-<br>
 <p>To find the PEAS description for the given AI problem and develop an AI agent.</p>
-<br>
+
 <h3>Theory</h3>
 <h3>Plant Watering Agent:</h3>
 <p>This agent monitors the soil moisture level of plants and waters them if the moisture is below a threshold (considered dry). The environment consists of multiple plants in different locations. The agent senses the moisture level of each plant and decides whether to water it. The agent’s performance is measured by the number of plants properly watered, and each unnecessary movement reduces performance. Hence, the agent ensures plants are properly maintained.</p>
+
 <hr>
 <h3>PEAS DESCRIPTION:</h3>
 <table border="1" cellpadding="5" cellspacing="0">
@@ -27,22 +27,19 @@
     <td><strong>Location, Soil Moisture level</strong></td>
   </tr>
 </table>
+
 <hr>
 <h3>DESIGN STEPS</h3>
-<h3>STEP 1: Identifying the input:</h3>
-<p>Soil moisture level of plants, Location of each plant.</p>
-<h3>STEP 2: Identifying the output:</h3>
-<p>Water the plant if the soil is dry.</p>
-<h3>STEP 3: Developing the PEAS description:</h3>
-<p>PEAS description is developed by specifying the performance, environment, actuators, and sensors in the agent.</p>
-<h3>STEP 4: Implementing the AI agent:</h3>
-<p>Check the soil moisture of each plant and water the plant if dry.</p>
-<h3>STEP 5:</h3>
-<p>Measure the performance parameters: For each plant watered, performance is incremented; for each unnecessary movement, performance is decremented.</p>
+<p><strong>STEP 1:</strong> Input: Soil moisture level of plants, Location of each plant.</p>
+<p><strong>STEP 2:</strong> Output: Water the plant if the soil is dry.</p>
+<p><strong>STEP 3:</strong> Develop PEAS description based on performance, environment, actuators, and sensors.</p>
+<p><strong>STEP 4:</strong> Implement the AI agent: Check soil moisture of each plant and water if dry.</p>
+<p><strong>STEP 5:</strong> Measure performance: Increment for watering, decrement for unnecessary movement.</p>
 
 <hr>
 <h3>CODE:</h3>
-```
+
+<textarea id="codeBlock" rows="35" cols="100" readonly>
 import random
 
 class PlantWateringAgent:
@@ -68,6 +65,7 @@ class PlantWateringAgent:
     def skip_plant(self, plant):
         print(f"{plant}: Soil is moist. No watering needed.")
 
+# Main function to test the agent
 def main():
     agent = PlantWateringAgent()
     # Example moisture levels (can be replaced with real sensor input)
@@ -82,16 +80,25 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
+</textarea>
+<br><br>
+<button onclick="copyCode()">Copy Code</button>
+
+<script>
+function copyCode() {
+  var copyText = document.getElementById("codeBlock");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
+  alert("Code copied to clipboard!");
+}
+</script>
 
 <hr>
 <h3>OUTPUT:</h3>
 <pre>
-Enter moisture level for Plant 1 (0-100): 25
 Plant 1: Soil is dry! Watering the plant.
-Enter moisture level for Plant 2 (0-100): 45
 Plant 2: Soil is moist. No watering needed.
-Enter moisture level for Plant 3 (0-100): 20
 Plant 3: Soil is dry! Watering the plant.
 
 Total actions performed by agent: 2
