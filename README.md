@@ -42,7 +42,6 @@
 
 <hr>
 <h3>CODE:</h3>
-<pre>
 ```
 import random
 
@@ -69,7 +68,6 @@ class PlantWateringAgent:
     def skip_plant(self, plant):
         print(f"{plant}: Soil is moist. No watering needed.")
 
-# Main function to test the agent
 def main():
     agent = PlantWateringAgent()
     # Example moisture levels (can be replaced with real sensor input)
@@ -85,7 +83,6 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-</pre>
 
 <hr>
 <h3>OUTPUT:</h3>
